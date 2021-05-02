@@ -127,9 +127,7 @@ class ImageUrlFormatter extends FormatterBase implements ContainerFactoryPluginI
 
       // Get the URL.
       $uri = $file->getFileUri();
-
 			$wrapper = $this->streamWrapperManager->getViaUri($uri);
-
       $url = $image_style ? $image_style->buildUrl($uri) : Url::fromUri($wrapper->getExternalUrl())->toString();
 
       // Output.
